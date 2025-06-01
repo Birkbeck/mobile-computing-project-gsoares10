@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="colorPrimary">#B06B77</color> <!-- Dusty Rose -->
+    <color name="colorPrimaryVariant">#8D4A57</color> <!-- Deep Mauve -->
+
+    <!-- Secondary Colors -->
+    <color name="colorSecondary">#D7CCC8</color> <!-- Soft Taupe -->
+    <color name="colorSecondaryVariant">#A1887F</color> <!-- Light Mocha -->
+
+    <!-- Accent Color -->
+    <color name="colorAccent">#F48FB1</color> <!-- Blush Pink -->
+
+    <!-- Background and Surface -->
+    <color name="colorBackground">#FDF7F7</color> <!-- Soft Pink-White -->
+    <color name="colorSurface">#FFFFFF</color> <!-- Clean White -->
+
+    <!-- Text Colors -->
+    <color name="colorTextPrimary">#4E342E</color> <!-- Rich Brown -->
+    <color name="colorTextSecondary">#6D4C41</color> <!-- Cocoa -->
+
+    <!-- Status Colors -->
+    <color name="colorSuccess">#A5D6A7</color> <!-- Soft Green -->
+    <color name="colorError">#EF9A9A</color> <!-- Warm Pink Red -->
+</resources>
