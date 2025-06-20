@@ -14,6 +14,7 @@
     <string name="sample_category">Brunch</string>
 
     <string-array name="recipe_categories">
+        <item>Categories</item>
         <item>Breakfast</item>
         <item>Brunch</item>
         <item>Lunch</item>

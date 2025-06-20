@@ -6,32 +6,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/text_app_title"
-        android:text="@string/app_name"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="@color/colorTextPrimary"
-        android:gravity="center_horizontal"
-        android:layout_gravity="center_horizontal"
+    <!-- First row for Add Recipe button and category filter spinner -->
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        android:gravity="center_horizontal">
 
-    <Button
-        android:id="@+id/button_add_recipe"
-        android:text="@string/add_recipe"
-        android:textColor="@android:color/white"
-        android:backgroundTint="@color/colorAccent"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp" />
+        <Button
+            android:id="@+id/button_add_recipe"
+            android:text="@string/add_recipe"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/colorAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="64dp"/>
 
+        <Spinner
+            android:id="@+id/category_filter_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/recipe_categories"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+
+    <!-- RecyclerView for displaying the recipe list -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recipe_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        />
+        android:layout_weight="1" />
 </LinearLayout>
