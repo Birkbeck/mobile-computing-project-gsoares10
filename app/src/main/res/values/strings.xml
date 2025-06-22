@@ -9,7 +9,9 @@
     <string name="ingredients_hint">Enter the ingredients for your recipe</string>
     <string name="instructions">Instructions</string>
     <string name="instructions_hint">Enter the instructions for your recipe</string>
+    <string name="edit">Edit</string>
     <string name="save">Save</string>
+    <string name="delete">Delete</string>
     <string name="sample_recipe_title">Omelette</string>
     <string name="sample_category">Brunch</string>
 
