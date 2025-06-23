@@ -14,7 +14,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
         val adapter = RecipeAdapter()
+        binding.recyclerView.adapter = adapter
+
 
         val dao = RecipesDatabase.getInstance(applicationContext).recipesDao()
         viewModel.recipesDao = dao
@@ -23,4 +26,7 @@ class MainActivity : AppCompatActivity() {
             adapter.updateRecipes(recipes)
         }
     }
+
+
+
 }
