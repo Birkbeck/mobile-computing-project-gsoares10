@@ -21,7 +21,7 @@ class RecipeAdapter(private var recipes: List<Recipe> = listOf()) : RecyclerView
     }
 
     fun updateRecipes(recipe: List<Recipe>) {
-        this.recipes = recipes
+        this.recipes = recipe
         notifyDataSetChanged()
     }
 
