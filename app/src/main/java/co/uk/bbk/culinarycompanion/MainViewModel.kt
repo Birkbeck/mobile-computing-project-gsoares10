@@ -59,4 +59,17 @@ class MainViewModel: ViewModel() {
         }
     }
 
+    fun filterRecipesByCategory(category: String) {
+        viewModelScope.launch {
+            recipesDao?.let {
+                val filtered = if (category == "All") {
+                    it.getAllRecipes()
+                } else {
+                    it.getRecipesByCategory(category)
+                }
+                _recipes.postValue(filtered)
+            }
+        }
+    }
+
 }

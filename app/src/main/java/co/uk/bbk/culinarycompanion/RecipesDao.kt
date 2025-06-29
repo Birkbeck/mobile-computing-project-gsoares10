@@ -19,4 +19,7 @@ interface RecipesDao {
 
     @Delete
     suspend fun deleteRecipe(recipe: Recipe)
+
+    @Query("SELECT * FROM recipes WHERE category = :category")
+    suspend fun getRecipesByCategory(category: String): List<Recipe>
 }
