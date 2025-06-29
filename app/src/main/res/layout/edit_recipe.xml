@@ -1,105 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@color/colorBackground"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:padding="16dp"
+    <ScrollView
+        android:background="@color/colorBackground"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
 
-        <TextView
-            android:id="@+id/text_recipe_details"
-            android:text="@string/recipe_details"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="@color/colorTextPrimary"
-            android:gravity="center_horizontal"
-            android:layout_gravity="center_horizontal"
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"/>
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:text="@string/recipe_title"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="@color/colorTextPrimary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text_recipe_details"
+                android:text="@string/recipe_details"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextPrimary"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"/>
 
-        <EditText
-            android:id="@+id/edit_title"
-            android:hint="@string/recipe_title_hint"
-            android:textColor="@color/colorTextPrimary"
-            android:backgroundTint="@color/colorSecondary"
-            android:minHeight="48dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:inputType="text"
-            android:importantForAutofill="no"/>
+            <TextView
+                android:text="@string/recipe_title"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-        <TextView
-            android:text="@string/category"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="@color/colorTextPrimary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/edit_title"
+                android:hint="@string/recipe_title_hint"
+                android:textColor="@color/colorTextPrimary"
+                android:backgroundTint="@color/colorSecondary"
+                android:minHeight="48dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:inputType="text"
+                android:importantForAutofill="no"/>
 
-        <Spinner
-            android:id="@+id/spinner_category"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:entries="@array/recipe_categories"
-            android:minHeight="48dp"
-            android:layout_marginBottom="12dp"/>
+            <TextView
+                android:text="@string/category"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-        <TextView
-            android:text="@string/ingredients"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="@color/colorTextPrimary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <Spinner
+                android:id="@+id/spinner_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/recipe_categories"
+                android:minHeight="48dp"
+                android:layout_marginBottom="12dp"/>
 
-        <EditText
-            android:id="@+id/edit_ingredients"
-            android:hint="@string/ingredients_hint"
-            android:textColor="@color/colorTextPrimary"
-            android:background="@drawable/edittext_box"
-            android:padding="12dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="12dp"
-            android:inputType="text"
-            android:importantForAutofill="no"/>
+            <TextView
+                android:text="@string/ingredients"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-        <TextView
-            android:text="@string/instructions"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="@color/colorTextPrimary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/edit_ingredients"
+                android:hint="@string/ingredients_hint"
+                android:textColor="@color/colorTextPrimary"
+                android:background="@drawable/edittext_box"
+                android:padding="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:inputType="text"
+                android:importantForAutofill="no"/>
 
-        <EditText
-            android:id="@+id/edit_instructions"
-            android:hint="@string/instructions_hint"
-            android:textColor="@color/colorTextPrimary"
-            android:background="@drawable/edittext_box"
-            android:padding="12dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="20dp"
-            android:inputType="text"
-            android:importantForAutofill="no"/>
+            <TextView
+                android:text="@string/instructions"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/edit_instructions"
+                android:hint="@string/instructions_hint"
+                android:textColor="@color/colorTextPrimary"
+                android:background="@drawable/edittext_box"
+                android:padding="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="20dp"
+                android:inputType="text"
+                android:importantForAutofill="no"/>
 
             <Button
                 android:id="@+id/button_save"
@@ -110,5 +112,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_height="wrap_content"/>
 
-    </LinearLayout>
-</ScrollView>
+        </LinearLayout>
+    </ScrollView>
+
+</layout>
