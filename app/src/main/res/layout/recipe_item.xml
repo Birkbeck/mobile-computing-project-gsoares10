@@ -14,7 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         card_view:cardCornerRadius="12dp"
-        card_view:cardElevation="4dp">
+        card_view:cardElevation="4dp"
+        android:fitsSystemWindows="true">
 
         <LinearLayout
             android:orientation="vertical"
