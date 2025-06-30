@@ -39,7 +39,7 @@
             <TextView
                 android:id="@+id/text_recipe_category"
                 android:text="@{recipe.category}"
-                android:textColor="@color/colorTextSecondary"
+                android:textColor="@color/colorTextPrimary"
                 android:textSize="14sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
