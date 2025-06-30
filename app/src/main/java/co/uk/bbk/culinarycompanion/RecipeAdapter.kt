@@ -1,5 +1,6 @@
 package co.uk.bbk.culinarycompanion
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -30,6 +31,13 @@ class RecipeAdapter(private var recipes: List<Recipe> = listOf()) : RecyclerView
         fun bind(recipe: Recipe) {
             binding.recipe = recipe
             binding.executePendingBindings()
+
+            // Navigates to ViewRecipeActivity when a Recipe is clicked on RecyclerView
+            binding.root.setOnClickListener {
+                val intent = Intent(binding.root.context, ViewRecipeActivity::class.java)
+                intent.putExtra("recipe", recipe)
+                binding.root.context.startActivity(intent)
+            }
         }
     }
 }
