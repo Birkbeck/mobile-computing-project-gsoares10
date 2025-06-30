@@ -1,5 +1,6 @@
 package co.uk.bbk.culinarycompanion
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -67,6 +68,10 @@ class EditRecipeActivity : AppCompatActivity() {
                 } else {
                     dao.insertRecipe(newRecipe)
                 }
+                val resultIntent = Intent().apply {
+                    putExtra("recipe", newRecipe)
+                }
+                setResult(RESULT_OK, resultIntent)
                 finish()
             }
         }

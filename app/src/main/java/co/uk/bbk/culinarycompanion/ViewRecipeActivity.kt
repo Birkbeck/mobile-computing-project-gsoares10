@@ -2,6 +2,7 @@ package co.uk.bbk.culinarycompanion
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -11,6 +12,17 @@ import kotlinx.coroutines.launch
 
 class ViewRecipeActivity : AppCompatActivity() {
     private lateinit var binding: ViewRecipeBinding
+
+    private val editRecipeLauncher = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        if (result.resultCode == RESULT_OK) {
+            val updatedRecipe = result.data?.getSerializableExtra("recipe", Recipe::class.java)
+            if (updatedRecipe != null) {
+                binding.recipe = updatedRecipe
+            }
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,8 +36,8 @@ class ViewRecipeActivity : AppCompatActivity() {
             // Edit button logic, navigates to EditRecipeActivity when clicked
             binding.buttonEdit.setOnClickListener {
                 val editIntent = Intent(this, EditRecipeActivity::class.java)
-                editIntent.putExtra("recipe", recipe)
-                startActivity(editIntent)
+                editIntent.putExtra("recipe", binding.recipe)
+                editRecipeLauncher.launch(editIntent)
             }
 
             //Delete button logic, deletes recipe from database
