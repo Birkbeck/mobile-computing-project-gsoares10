@@ -16,7 +16,7 @@
             <TextView
                 android:id="@+id/text_recipe_details"
                 android:text="@string/recipe_details"
-                android:textSize="24sp"
+                android:textSize="26sp"
                 android:textStyle="bold"
                 android:textColor="@color/colorTextPrimary"
                 android:gravity="center_horizontal"
@@ -27,7 +27,7 @@
 
             <TextView
                 android:text="@string/recipe_title"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@color/colorTextPrimary"
                 android:layout_width="wrap_content"
@@ -37,7 +37,7 @@
                 android:id="@+id/edit_title"
                 android:hint="@string/recipe_title_hint"
                 android:textColor="@color/colorTextPrimary"
-                android:backgroundTint="@color/colorSecondary"
+                android:textSize="20sp"
                 android:minHeight="48dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
 
             <TextView
                 android:text="@string/category"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@color/colorTextPrimary"
                 android:layout_width="wrap_content"
@@ -74,6 +74,7 @@
                 android:hint="@string/ingredients_hint"
                 android:textColor="@color/colorTextPrimary"
                 android:background="@drawable/edittext_box"
+                android:textSize="18sp"
                 android:padding="12dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -84,7 +85,7 @@
 
             <TextView
                 android:text="@string/instructions"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@color/colorTextPrimary"
                 android:layout_width="wrap_content"
@@ -95,6 +96,7 @@
                 android:hint="@string/instructions_hint"
                 android:textColor="@color/colorTextPrimary"
                 android:background="@drawable/edittext_box"
+                android:textSize="18sp"
                 android:padding="12dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -106,8 +108,9 @@
             <Button
                 android:id="@+id/button_save"
                 android:text="@string/save"
-                android:textColor="@android:color/white"
-                android:backgroundTint="@color/colorAccent"
+                android:textColor="@color/colorTextSecondary"
+                android:backgroundTint="@color/colorSave"
+                android:textSize="20sp"
                 android:layout_width="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_height="wrap_content"/>
